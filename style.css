@@ -26,7 +26,8 @@ ul li a:hover, ul li a:active{
     border: groove orangered;
     border-radius: 3px;
     margin: 1px;
-    position: sticky; /* i don't know why is not working */
+    position: sticky;
+    top: 0;
 }
 .body{
     border-radius: 3px;
