@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    background-color: dimgrey;
+}
+h1, h1 a{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -3px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(59, 58, 58);
+    text-shadow: 4px -3px 3px rgb(24, 24, 23);
+}
+.navegador li{
+    display: inline-block;
+    font-size: 1em;
+}
+ul li a{
+    padding: 5px;
+    color: blanchedalmond;
+    margin: 6px;
+    font-size: 1.15em;
+}
+ul li a:hover, ul li a:active{
+    text-shadow: 4px -3px 3px #000000;
+}
+ul li:last-child{
+    margin-right: 0;
+}
+.header{
+    background-color: rgb(59, 57, 56);
+    border: groove rgb(59, 57, 56);
+    border-radius: 3px;
+    margin: 1px;
+    position: sticky;
+    top: 0;
+}
+.body{
+    border-radius: 3px;
+    border: groove;
+    margin: 1px;
+}
+p{
+    outline: medium solid yellow;
+    width: 80%;
+    margin: 20px auto;
+        /* outline to make a border on the border */
+    outline-offset: 2px;
+    padding: 5px;
+    font-family: monospace;
+    font-size: x-large;
+    text-align: justify;
+    /* identation for the first paragraph of a text*/
+    text-indent: 50px;
+    /* Determine spacing between the letters!*/
+    letter-spacing: 3px;
+    /* determine the spacing between the lines*/
+    line-height: 1.5;
+    /*Word Spacing determine the spacing between the words!*/
+    word-spacing: 2px;
+    color: blue;
+}
+a{
+    text-decoration: none;
+}
+p a{
+    color: blue;
+    text-decoration: underline rgb(255, 251, 0);
+    font-style: italic;
+}
+p a:hover{
+    text-decoration: underline red;
+}
+.bold{
+    font-weight: bolder;
+}
+.footer{
+    text-align: center;
+    background-color: rgb(59, 57, 56);
+    border: groove rgb(59, 57, 56);
+    border-radius: 3px;
+    overflow: hidden;
+    height: 20px;
+    margin: 1px;
+    padding: 15px;
+    font-size: 0.95em;
+    text-shadow: 4px -3px 3px rgb(24, 24, 23);
+    color: blanchedalmond;
+}
