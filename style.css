@@ -15,8 +15,11 @@ ul li a{
 }
 ul li a:hover, ul li a:active{
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: blanchedalmond;
+    letter-spacing: -2px;
+    color: black;
+    background-color: rgb(248, 242, 241);
+    border-style: double;
+    border-radius: 5px;
 }
 .header{
     background-color: orangered;
@@ -55,8 +58,9 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     font-variant: small-caps;
     font-weight: 700;
-    font-size: 35px;
-    letter-spacing: -1px;  
+    font-size: 40px;
+    letter-spacing: -3px;
+    height: 20px;  
 }
 a{
     text-decoration: none;
