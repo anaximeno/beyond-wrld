@@ -1,44 +1,67 @@
 body{
     margin: 0;
 }
-.linha{
-    max-width: 100%;
+
+/* <navegator> */
+
+.nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    overflow: hidden;
+    opacity: 0.8;
+    border: 1px solid #333;
 }
-.navegador li{
-    display: inline-block;
+.nav-list li{
+    float: left;
+}
+.nav-list li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
     font-size: 1em;
 }
-ul li a{
-    padding: 5px;
-    color: black;
-    margin: 6px;
-    font-size: 1.15em;
+.nav-list li a:not(.active):hover{
+    background-color: #111;
+    opacity: 1.0;
 }
-ul li a:hover, ul li a:active{
-    color: black;
-    background-color: rgb(248, 242, 241);
-    outline: double;
-    border-radius: 1px;
+.active{
+    background-color: red;
 }
-ul li a:last-child{
-    margin-left: 0;
-}
-.header{
-    background-color: orangered;
-    border: groove orangered;
-    border-radius: 3px;
-    margin: 1px;
+.navegator{
     position: sticky;
     top: 0;
 }
-.body{
-    border-radius: 3px;
-    border: groove;
-    margin: 1px;
+
+/* </navegator> */
+
+/* <title> */
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -3px;
+    height: 20px;  
 }
+h1 a{
+    color: #33001a;
+    text-shadow: 3px -3px 4px #ff99cc;
+}
+h1 span{
+    display: none;
+}
+h1:hover span{
+    display: inline-block;
+}
+/* </title> */
 p{
-    border: 1px solid black;
-    outline: medium solid yellow;
+    border: 2px solid black;
+    outline: 2px solid yellow;
     width: 80%;
     margin: 20px auto;
         /* outline to make a border on the border */
@@ -56,38 +79,26 @@ p{
     /*Word Spacing determine the spacing between the words!*/
     word-spacing: 2px;
 }
-h1{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-variant: small-caps;
-    font-weight: 700;
-    font-size: 40px;
-    letter-spacing: -3px;
-    height: 20px;  
-}
 a{
     text-decoration: none;
 }
 p a{
-    color: chartreuse;
-}
-#title{
-    color: black;
-}
-#title:hover{
-    text-shadow: 4px -3px rgb(236, 238, 232);
+color: chartreuse;
 }
 .bold{
-    font-weight: bolder;
+font-weight: bolder;
 }
+
+/* <footer> */
 .footer{
-    text-align: center;
-    background-color: darkgoldenrod;
-    border: groove darkgoldenrod;
-    border-radius: 3px;
-    overflow: hidden;
-    height: 20px;
-    margin: 1px;
-    padding: 15px;
-    font-size: large;
-    }
+text-align: center;
+background-color: #111;
+opacity: 0.8;
+overflow: hidden;
+color: white;
+height: 20px;
+margin: 1px;
+padding: 15px;
+font-size: 0.95em;
+}
+/* </footer> */
