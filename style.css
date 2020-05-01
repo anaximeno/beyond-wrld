@@ -91,6 +91,10 @@ h1 span{
     color: red;
     text-shadow: 3px -3px 4px #af9d9d;
 }
+h1 a:hover{
+    color: rgb(230, 22, 22);
+    text-shadow: 3px -3px 4px #af9d9d;
+}
 h2{
     text-align: center;
 }
