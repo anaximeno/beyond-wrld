@@ -6,7 +6,7 @@
     <meta name="author" content="Anaxímeno Brito">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="grid.css">
     <title>BWrld</title>
 </head>
 <!-- neck -->
@@ -22,47 +22,106 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#help">Help</a></li>
                 <li><a href="#contact">Contacts</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="#link1">Link 1</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </li>
                 <li style="float: right;"><a href="#about">About</a></li>
             </ul>
         </nav>
     </div>
     <!---->
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-        et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, id architecto assumenda hic laborum dicta.</p>
+    <div class="row">
+        <h2>One Row Three Columns</h2>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>
+        </div>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>
+        </div>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>
+        </div>
+    </div>
+    <div class="row">
+        <h2>One Row Three Columns</h2>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>
+        </div>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>        
+        </div>
+        <div class="column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+            et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+            id architecto assumenda hic laborum dicta.</p>        
+        </div>
+    </div>
+    <div class="row">
+        <h2>One Row Two Columns</h2>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+    </div>
+    <div class="row">
+        <h2>One Row Two Columns</h2>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+    </div>
+    <div class="row">
+        <h2>One Row Two Columns</h2>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
+                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
+                id architecto assumenda hic laborum dicta.</p>        
+        </div>
+    </div>
     <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div> 
 </body>
 </html>
