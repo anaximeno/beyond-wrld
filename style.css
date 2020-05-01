@@ -80,17 +80,16 @@ h1{
     font-weight: 700;
     font-size: 40px;
     letter-spacing: -3px;
-    max-width: 30%;
+    width: auto;
 }
 h1 a{
     color: #504c4c;
     text-shadow: 3px -3px 4px #afaeae;
+    padding: 5px;
 }
 h1 span{
-    display: none;
-}
-h1:hover span{
-    display: inline;
+    color: red;
+    text-shadow: 3px -3px 4px #af9d9d;
 }
 h2{
     text-align: center;

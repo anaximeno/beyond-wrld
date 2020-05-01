@@ -34,13 +34,9 @@
     header h3{
         display: block;
         float: none;
-    }
-    h1 span{
-        display: inline;
+        text-align: left;
     }
     h1{
-        width: 100% !important;
-        margin: 0 19vw 0 0;
-        
+        text-align: center !important;
     }
 }
