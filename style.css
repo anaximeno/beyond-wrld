@@ -136,3 +136,22 @@ padding: 30px;
 font-size: 0.95em;
 }
 /* </footer> */
+
+/*imgs*/
+.galery{
+    border: 2px solid #504c4c;
+    max-width: 100% !important;
+    background-color: deepskyblue;
+}
+.desc{
+    padding: 5px;   
+}
+.galery h3{
+    text-transform: capitalize;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+img{
+    max-width: 100% !important;
+}
