@@ -20,21 +20,21 @@
 /*responsive screen*/
 @media screen and (max-width: 600px){
     .column{
-        width: 100%;
+        width: 100% !important;
     }
     .column2{
-        width: 100%;
+        width: 100% !important;
     }
     .nave{
-        position: static;
+        position: static !important;
     }
     .nav-list li{
         float: none !important;
     }
     header h3{
-        display: block;
-        float: none;
-        text-align: left;
+        display: block !important;
+        float: none !important;
+        text-align: left !important;
     }
     h1{
         text-align: center !important;
