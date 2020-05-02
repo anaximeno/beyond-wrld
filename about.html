@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anaxímeno Brito">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid.css">
+    <title>BWrld</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        #fiximg{
+            width: 100%;
+            height: auto;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        .p{
+            background-color: white;
+            max-width: 100%;
+            margin: auto 0;
+            box-sizing: border-box;
+            border-radius: 10px 10px 0 0;
+            overflow: visible;
+        }
+        .p p{
+            padding: 0 30px;
+            font-size: 20px;
+            text-align: justify;
+            margin: 0;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .p p:first-of-type{
+            padding: 30px;
+            text-indent: 25px;
+        }
+        .p p:last-of-type{
+            padding-bottom: 20px;
+        }
+        h2#initial{
+            margin-left: 50px;
+            margin-bottom: 100px;
+            color: #fff;
+            font-size: 30px;
+            text-shadow: 2px -2px 4px #fca3506b;
+            text-transform: uppercase;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /*Navigation Bar*/
+        .nav-list{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #333;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .nave{
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        .nav-list li{
+            float: left;
+        }
+        .nav-list li > a, dropbtn{
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+        }
+        .nav-list li > a:not(.active):hover, dropbtn:hover{
+            background-color: #111;
+        }
+        .active{
+            background-color: red;
+        }
+
+        /* </navegator> */
+
+        /*Dropdown*/
+        li.dropbtn{display: inline-block;}
+        .dropdown-content{
+            position: absolute;
+            z-index: 1;
+            display: none;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            background-color: white;
+        }
+        .dropdown-content a:hover{background-color: #f1f1f1;}
+        .dropdown:hover .dropdown-content{display: block;}
+
+        /*Header*/
+        header{
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        h1, header h3{
+            display: inline-block;
+        }
+        header h3{
+            padding: 20px;
+            margin:0 auto;
+            color: rgb(253, 227, 177);
+            text-shadow: 3px -3px 3px rgba(37, 88, 52, 0.5);
+            float: right;
+        }
+    
+        /* <title> */
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-variant: small-caps;
+            font-weight: 700;
+            font-size: 40px;
+            letter-spacing: -3px;
+            width: auto;
+        }
+        h1 a{
+            color: #504c4c;
+            text-shadow: 3px -3px 4px #afaeae;
+            padding: 5px;
+            text-decoration: none;
+        }
+        h1 span{
+            color: red;
+            text-shadow: 3px -3px 4px #af9d9d;
+        }
+        h1 a:hover{
+            color: rgb(230, 22, 22);
+            text-shadow: 3px -3px 4px #af9d9d;
+        }
+
+        /* <footer> */
+        .footer{
+            text-align: center;
+            background-color: #f1f1f1;
+            opacity: 0.8;
+            overflow: visible;
+            color: black;
+            height: 20px;
+            margin: 0;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+        /* </footer> */
+        @media screen and (max-width: 600px){
+            h2#initial{
+                margin-bottom: 20px;
+                color: red !important;
+            }
+        }
+    </style>
+</head>
+<!--neck-->
+<body>
+    <header>
+        <h1><a href="index.html" title="This is the namest &#128513;"><span>&#9734; </span>Beyond Wrld</a></h1>
+        <h3>Under Construction...</h3>
+    </header>
+    <div class="nave">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+                        <a href="#link2">Link 2</a>
+                        <a href="#link3">Link 3</a>
+                    </div>
+                </li>
+                <li style="float: right;"><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!---->
+    <img id="fiximg" src="imagem/fall.jpg" alt="imagem">
+    <h2 id="initial">About</h2>
+    <div class="p">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis, dolorem, odit veritatis quis corrupti officiis 
+        suscipit debitis id numquam modi fuga architecto? 
+        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
+        aperiam, necessitatibus possimus consequuntur optio iusto. 
+        Reiciendis repellendus, pariatur error ad explicabo et.</p>        
+    </div>
+    <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div>
+    </body>
+</html>
