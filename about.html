@@ -127,12 +127,20 @@
         }
     
         /* <title> */
+        @font-face{
+            font-family: branda;
+            src: url(fonts/brandafont.ttf);
+        }
+        @font-face{
+            font-family: wavepool;
+            src: url(fonts/wavepoolfont.ttf);
+        }
         h1{
-            font-family: 'Times New Roman', Times, serif;
+            font-family: branda, serif;
             font-variant: small-caps;
             font-weight: 700;
-            font-size: 40px;
-            letter-spacing: -3px;
+            font-size: 50px;
+            letter-spacing: 0px;
             width: auto;
         }
         h1 a{
@@ -166,6 +174,10 @@
             h2#initial{
                 margin-bottom: 20px;
                 color: red !important;
+            }
+            #fiximg{
+                width: auto;
+                height: 90%;
             }
         }
     </style>
