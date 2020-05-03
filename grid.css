@@ -40,6 +40,19 @@
     .column75{
         width: 100% !important;
     }
+    .nav-list{
+        font-size: 0.90em !important;
+    }
+    .nav-list li a img{
+       max-width: 29px;
+    }
+    header h3{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+@media screen and (max-width:440px){
     .nave{
         position: static !important;
     }

@@ -12,7 +12,7 @@ body{
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.918);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-size: 1.25em;
 }
@@ -32,7 +32,7 @@ body{
     text-align: center;
 }
 .nav-list li > a:not(.active):hover, dropbtn:hover{
-    background-color: #111;
+    background-color: rgb(136, 133, 133);
 }
 .active{
     background-color: red;
@@ -61,7 +61,7 @@ li.dropbtn{display: inline-block;}
 }
 .dropdown-content a:hover{background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content{display: block;}
-.dropdown-content a:hover::before{content: '\2660' " ";}
+.dropdown-content a:hover::before{content: '\2665' " ";}
 /*Header*/
 header{
     background-color: #f1f1f1;
@@ -129,6 +129,9 @@ font-size: 0.95em;
 /*imgs*/
 img{
     max-width: 100%;
+    height: auto;
+}
+.nav-list img{
     height: auto;
 }
 
