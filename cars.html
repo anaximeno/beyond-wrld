@@ -16,6 +16,7 @@
             background-color: #f1f1f1;
             float: left;
             margin-right: 15px;
+            box-sizing: border-box;
         }
         h3{
             text-align: center;
@@ -37,10 +38,6 @@
         }
         @media screen and (max-width: 700px) {
             aside{display: none !important;}
-            .galery{
-                display: table;
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -93,7 +90,7 @@
         <div class="column75">
             <div class="row">
                 <h3>Ford Mustang</h3>
-                <div class="galery">
+                <div class="galery" style="box-shadow: 10px 10px 10px  grey;">
                         <img src="imagem/mustang.jpg" alt="">
                         <div class="description">
                             <h3>Mustang Shelby GT500 2020</h3><br>
@@ -127,7 +124,7 @@
             </div>
             <div class="row">
                 <h3>Mercedes-Benz</h3>
-                <div class="galery" style="float: right; margin-left: 15px;">
+                <div class="galery" style="float: right; margin-left: 15px; box-shadow: -10px 10px 10px  grey;">
                         <img src="imagem/mgtr.jpg" alt="">
                         <div class="description">
                             <h3>Mercedes-AMG GT/GTR 2020</h3><br>
