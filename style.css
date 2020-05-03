@@ -37,7 +37,9 @@ body{
 .active{
     background-color: red;
 }
-
+a:link{
+    text-decoration: none;
+}
 /* </navegator> */
 
 /*Dropdown*/
@@ -59,7 +61,7 @@ li.dropbtn{display: inline-block;}
 }
 .dropdown-content a:hover{background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content{display: block;}
-
+.dropdown-content a:hover::before{content: '\2660' " ";}
 /*Header*/
 header{
     background-color: #f1f1f1;
@@ -93,6 +95,7 @@ h1{
     width: auto;
 }
 h1 a{
+    text-decoration: none;
     color: #504c4c;
     text-shadow: 3px -3px 4px #afaeae;
     padding: 5px;
@@ -109,36 +112,11 @@ h2{
     text-align: center;
 }
 /* </title> */
-p{
-    text-align: justify;
-    font-size: 18px;
-    text-align: justify;
-    /* Determine spacing between the letters!*/
-    letter-spacing: 1px;
-    /* determine the spacing between the lines*/
-    line-height: 1.5;
-    /*Word Spacing determine the spacing between the words!*/
-    word-spacing: 1px;
-}
-p:first-of-type{
-    /* identation for the first paragraph of a text*/
-    text-indent: 50px;
-}
-a{
-    text-decoration: none;
-}
-p a{
-color: chartreuse;
-}
-.bold{
-font-weight: bolder;
-}
 
 /* <footer> */
 .footer{
 text-align: center;
 background-color: #f1f1f1;
-opacity: 0.8;
 overflow: visible;
 color: black;
 height: 20px;
@@ -149,20 +127,6 @@ font-size: 0.95em;
 /* </footer> */
 
 /*imgs*/
-.galery{
-    border: 2px solid #504c4c;
-    max-width: 100% !important;
-    background-color: deepskyblue;
-}
-.desc{
-    padding: 5px;   
-}
-.galery h3{
-    text-transform: capitalize;
-    text-align: center;
-    overflow: hidden;
-    color: white;
-}
 img{
     max-width: 100%;
     height: auto;
@@ -187,7 +151,7 @@ aside h3{
     color: rgb(104, 18, 18);
     font-size: 1.25em;
 }
-aside h3 span{
+aside h3 span a{
     color: orangered;
 }
 aside img{
@@ -196,3 +160,4 @@ aside img{
 aside h4{
     text-align: left;
 }
+

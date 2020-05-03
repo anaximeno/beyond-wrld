@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="grid.css">
     <title>BWrld</title>
+    <style>
+        p{
+            text-align: justify;
+            font-size: 18px;
+            text-align: justify;
+            /* Determine spacing between the letters!*/
+            letter-spacing: 1px;
+            /* determine the spacing between the lines*/
+            line-height: 1.5;
+            /*Word Spacing determine the spacing between the words!*/
+            word-spacing: 1px;
+        }
+        p:first-of-type{
+            /* identation for the first paragraph of a text*/
+            text-indent: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        p a{
+            color: chartreuse;
+        }
+        .bold{
+            font-weight: bolder;
+        }
+        .galery{
+            border: 2px solid #504c4c;
+            max-width: 100% !important;
+            background-color: deepskyblue;
+        }
+        .desc{
+            padding: 5px;   
+        }
+    </style>
 </head>
 <!-- neck -->
 <body>
@@ -19,14 +53,14 @@
         <nav>
             <ul class="nav-list">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#help">Help</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="wanted.html">Wanted</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
                     <div class="dropdown-content">
                         <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
-                        <a href="#link2">Link 2</a>
+                        <a href="https://www.animesvision.com.br/" target="_blank">Anime Vision</a>
                         <a href="#link3">Link 3</a>
                     </div>
                 </li>
@@ -135,7 +169,7 @@
         <div class="column25">
             <!--aside-->
             <aside>
-                <h3>&#9760; <span>Wanted List</span> &#9760</h3>
+                <h3>&#9760; <span><a href="wanted.html">Wanted List</a></span> &#9760</h3>
                 <hr>
                 <h4>Hiken no Ace</h4>
                 <img src="imagem/whereis.jpg" alt="wanted Ace">
