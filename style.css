@@ -71,11 +71,18 @@ h1, header h3{
     display: inline-block;
 }
 header h3{
-    padding: 20px;
-    margin:0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
     color: rgb(253, 227, 177);
     text-shadow: 3px -3px 3px rgba(37, 88, 52, 0.5);
-    float: right;
+    animation: underer 4s linear infinite;
+}
+@keyframes underer{
+    0% {color: rgb(253, 227, 177);text-shadow: 3px -3px 3px rgba(37, 88, 52, 0.5);}
+    25% {color: red;text-shadow: 3px -3px 3px rgba(247, 5, 5, 0.616);}
+    50% {color: blue;text-shadow: 3px -3px 3px rgba(0, 0, 255, 0.699);}
+    75% {color: rgb(18, 185, 18);text-shadow: 3px -3px 3px rgba(54, 175, 18, 0.63);}
 }
 /* <title> */
 @font-face{
