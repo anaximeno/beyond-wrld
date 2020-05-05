@@ -11,15 +11,29 @@
     <style>
         /*galery imgs*/
         .galery{
-            border: 2px solid #504c4c;
+            border: 1px solid #504c4c;
             max-width: 35%;
             background-color: #f1f1f1;
             float: left;
-            margin-right: 15px;
+            margin:0 15px 15px;
+
             box-sizing: border-box;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2), 0 6px 20px 0 rgba(0, 0, 0,0.19);
         }
         h3{
             text-align: center;
+        }
+        .principal{
+            color: #333;
+            letter-spacing: 3px;
+            font-size: 1.85em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .row > h3{
+            font-size: 1.5em;
+        }
+        .row > h3::first-letter{
+            color: red;
         }
         .description h3{
             text-transform: capitalize;
@@ -89,9 +103,9 @@
         </div>
         <div class="column75">
             <div class="row">
-                <h3>Ford Mustang</h3>
-                <div class="galery" style="box-shadow: 10px 10px 10px  grey;">
-                        <img src="imagem/mustang.jpg" alt="">
+                <h3>Ford</h3>
+                <div class="galery">
+                        <img src="imagem/mustang.jpg" alt="mustang img">
                         <div class="description">
                             <h3>Mustang Shelby GT500 2020</h3><br>
                             <p>
@@ -124,8 +138,8 @@
             </div>
             <div class="row">
                 <h3>Mercedes-Benz</h3>
-                <div class="galery" style="float: right; margin-left: 15px; box-shadow: -10px 10px 10px  grey;">
-                        <img src="imagem/mgtr.jpg" alt="">
+                <div class="galery" style="float: right; margin-left: 15px;">
+                        <img src="imagem/mgtr.jpg" alt="mercedes mgtr img">
                         <div class="description">
                             <h3>Mercedes-AMG GT/GTR 2020</h3><br>
                             <p>
