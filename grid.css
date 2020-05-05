@@ -59,11 +59,6 @@
     .nav-list li{
         float: none !important;
     }
-    header h3{
-        display: block !important;
-        float: none !important;
-        text-align: left !important;
-    }
     h1{
         text-align: center !important;
     }
