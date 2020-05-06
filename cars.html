@@ -24,6 +24,7 @@
             text-align: center;
         }
         .principal{
+            margin-top: 0;
             color: #333;
             letter-spacing: 3px;
             font-size: 1.85em;
@@ -52,6 +53,24 @@
         }
         @media screen and (max-width: 700px) {
             aside{display: none !important;}
+        }
+        
+        aside{
+            margin: 0;
+            display: block;
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #616161;
+            color: white;
+            border-radius: 0 4px 4px 0;
+        }
+        aside h3 a:hover{
+            text-decoration: underline;
+        }
+        .column25{
+            padding: 0;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -82,25 +101,23 @@
         </nav>
     </div>
     <!---->
-    <h2 class="principal">Amazing Cars</h2>
     <div class="row">
         <div class="column25">
             <aside>
                 <h3>&#9760; <span><a href="wanted.html">Wanted List</a></span> &#9760</h3>
-                <hr>
-                <h4>Hiken no Ace</h4>
+                <h4>&raquo; Hiken no Ace</h4>
                 <img src="imagem/whereis.jpg" alt="wanted Ace">
                 <p>Wanted Portgas D. Ace lorem ipsum propisius 
                 azerty di humunculos et quertys sabatis abeta jut ganma
                 canon hibashira no Hiken...</p>
-                <hr>
-                <h4>Others Kaisoku</h4>
+                <h4>&raquo; Others Kaisoku</h4>
                 <img src="imagem/wanted.jpg" alt="wanted pirates">
                 <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
                 et suplicudo goferta dragon revoluciu decartuym amet mugi's
                 trip olation...</p>
             </aside>
         </div>
+        <h2 class="principal">Amazing Cars</h2>
         <div class="column75">
             <div class="row">
                 <h3>Ford</h3>
@@ -137,7 +154,7 @@
                 </div>
             </div>
             <div class="row">
-                <h3>Mercedes-Benz</h3>
+                <h3>Mercedes</h3>
                 <div class="galery" style="float: right; margin-left: 15px;">
                         <img src="imagem/mgtr.jpg" alt="mercedes mgtr img">
                         <div class="description">

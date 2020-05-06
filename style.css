@@ -30,6 +30,7 @@ body{
     color: white;
     padding: 8px 16px;
     text-align: center;
+    transition: background-color .3s;
 }
 .nav-list li > a:not(.active):hover, dropbtn:hover{
     background-color: rgb(136, 133, 133);
