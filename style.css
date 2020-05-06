@@ -51,6 +51,7 @@ li.dropbtn{display: inline-block;}
     display: none;
     min-width: 160px;
     box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    transition: all 0.4s;
 }
 .dropdown-content a{
     color: black;
@@ -59,6 +60,7 @@ li.dropbtn{display: inline-block;}
     display: block;
     text-align: left;
     background-color: white;
+    content: "";
 }
 .dropdown-content a:hover{background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content{display: block;}
