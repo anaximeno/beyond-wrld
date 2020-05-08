@@ -128,7 +128,7 @@ h2{
 /* <footer> */
 .footer{
 text-align: center;
-background-color: #f1f1f1;
+background-color: #ddd;
 overflow: visible;
 color: black;
 height: 20px;
@@ -157,8 +157,9 @@ aside{
     text-align: center;
 }
 aside p{
-    text-align: left;
-    text-indent: 2px;
+    color: black;
+    text-align: justify;
+    text-indent: 20px;
     font: 0.75em sans-serif;
 }
 aside h3{
@@ -167,7 +168,7 @@ aside h3{
     font-size: 1.25em;
 }
 aside h3 span a{
-    color: orangered;
+    color: rgb(51, 49, 49);
 }
 aside img{
     max-width: 80%;
