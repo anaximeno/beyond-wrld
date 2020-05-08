@@ -177,3 +177,8 @@ aside h4{
     text-align: left;
 }
 
+@media screen and (max-width: 400px){
+    .active{
+        background-color: red !important;
+    }
+}
