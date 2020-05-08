@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="grid.css">
     <title>BWrld</title>
     <style>
         /*galery imgs*/
         .galery{
-            border: 1px solid #504c4c;
-            max-width: 35%;
+            max-width: 100%;
+            margin: 15px;
             background-color: #f1f1f1;
-            float: left;
-            margin:0 15px 15px;
-
             box-sizing: border-box;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2), 0 6px 20px 0 rgba(0, 0, 0,0.19);
         }
@@ -24,16 +20,16 @@
             text-align: center;
         }
         .principal{
-            margin-top: 0;
+            margin-top: 30px;
             color: #333;
             letter-spacing: 3px;
             font-size: 1.85em;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-        .row > h3{
+        .row > div > h3{
             font-size: 1.5em;
         }
-        .row > h3::first-letter{
+        .row > div > h3::first-letter{
             color: red;
         }
         .description h3{
@@ -43,7 +39,11 @@
             color: #333;
             margin: auto 0;
         }
+        .description p{
+            padding: 2px 0 16px 0;
+        }
         .text p{
+            padding: 0 15px;
             text-align: justify;
             text-indent: 25px;
         }
@@ -51,25 +51,96 @@
             margin-left: 15px;
             font-weight: 800;
         }
-        @media screen and (max-width: 700px) {
-            aside{display: none !important;}
-        }
         
+        /*sideinfo*/
         aside{
             margin: 0;
             display: block;
             width: 100%;
             height: 100%;
-            background-color: #8f8f8f;
+            background-color: #1abc9c;
             color: white;
             border-radius: 0;
         }
+        aside h4{
+            font-size: 0.85em;
+        }
         aside h3 a:hover{
-            text-decoration: underline;
+            text-decoration: underline white;
+        }
+        aside img{
+            padding: 0 15px;
+            max-width: 100%;
+            height: auto;
+            object-fit: fill;
+        }
+        aside p{
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        /**
+        *Flex Grid*
+        */
+        .row{
+            display: flex;
+            flex-wrap: wrap;
         }
         .column25{
-            padding: 0;
-            box-sizing: border-box;
+            flex: 25%;
+        }
+        .column30{
+            flex: 30%;
+        }
+        .column33{
+            flex: 33.33%;
+        }
+        .column50{
+            flex: 50%;
+        }
+        .column70{
+            flex: 70%;
+        }
+        .column75{
+            flex:75%
+        }
+
+        /*RWD*/
+        @media screen and (max-width: 700px) {
+            .row:not(.side){
+                flex-direction: column !important;
+            }
+            .column30, .column75{
+                order: 2 !important;
+            }
+            .columns70, .column25{
+                order: 1 !important;
+            }
+            .nav-list{
+                font-size: 0.90em !important;
+            }
+            .nav-list li a img{
+                max-width: 29px;
+            }
+            header h3{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            aside{
+                border-radius: 15px 15px 0 0;
+            }
+        }
+        @media screen and (max-width:440px){
+            .nave{
+                position: static !important;
+            }
+            .nav-list li{
+                float: none !important;
+            }
+            h1{
+                text-align: center !important;
+            }
         }
     </style>
 </head>
@@ -101,28 +172,68 @@
     </div>
     <!---->
     <div class="row">
-        <div class="column25">
+        <div class="column30">
             <aside>
                 <h3>&#9760; <span><a href="wanted.html">Wanted List</a></span> &#9760</h3>
-                <h4>&raquo; Hiken no Ace</h4>
-                <img src="imagem/whereis.jpg" alt="wanted Ace">
-                <p>Wanted Portgas D. Ace lorem ipsum propisius 
-                azerty di humunculos et quertys sabatis abeta jut ganma
-                canon hibashira no Hiken...</p>
-                <h4>&raquo; Others Kaisoku</h4>
-                <img src="imagem/wanted.jpg" alt="wanted pirates">
-                <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
-                et suplicudo goferta dragon revoluciu decartuym amet mugi's
-                trip olation...</p>
+                <div class="row side">
+                    <div class="column33">
+                        <h4>&raquo; Hiken no Ace</h4>
+                        <img src="imagem/whereis.jpg" alt="wanted Ace">
+                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
+                        azerty di humunculos et quertys sabatis abeta jut ganma
+                        canon hibashira no Hiken (...)</p>
+                    </div>
+                    <div class="column33">
+                        <h4>&raquo; Others Kaisoku</h4>
+                        <img src="imagem/wanted.jpg" alt="wanted pirates">
+                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
+                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
+                        trip olation Lorem ipsum dolor sit amet, consect(...)</p>
+                    </div>
+                    <div class="column33">
+                        <h4>&raquo; The're Wanted</h4>
+                        <img src="imagem/want.jpeg" alt="wanted img">
+                        <p>Wanted the y lorem east blue xablardom zombir fortadus minatus nakaze
+                        et supdo gerta drito revoliu decartuym onara set amet mugi's
+                        trip olation Lorem i have dolor sit amet, consectetur (...)</p>
+                    </div>
+                </div>
+                <div class="row side">
+                    <div class="column33" style="order: 1;">
+                        <h4>&raquo; Others Kaisoku</h4>
+                        <img src="imagem/wanted.jpg" alt="wanted pirates">
+                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
+                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
+                        trip olation Lorem ipsum dolor sit amet, consectetur(...)</p>
+                    </div>
+                    <div class="column33" style="order: 3;">
+                        <h4>&raquo; Hiken no Ace</h4>
+                        <img src="imagem/whereis.jpg" alt="wanted Ace">
+                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
+                        azerty di humunculos et quertys sabatis abeta jut ganma
+                        canon hibashira no Hiken(...)</p>
+                    </div>
+                    <div class="column33" style="order: 2;">
+                        <h4>&raquo; The're Wanted</h4>
+                        <img src="imagem/want.jpeg" alt="wanted img">
+                        <p>Wanted the y lorem east blue xablardom zombir fortadus minatus nakaze
+                        et supdo gerta drito revoliu decartuym onara set amet mugi's
+                        trip olation Lorem i have dolor sit amet(...)</p>
+                    </div>
+                </div>
+                
+                
             </aside>
         </div>
-        <h2 class="principal">Amazing Cars</h2>
-        <div class="column75">
+
+        <div class="column70">
+            <h2 class="principal">Amazing Cars</h2>
+            <br>
+            <h3>Ford</h3>
             <div class="row">
-                <hr>
-                <h3>Ford</h3>
-                <div class="galery">
-                        <img src="imagem/mustang.jpg" alt="mustang img">
+                <div class="column25">
+                    <div class="galery">
+                        <img src="imagem/mustang.jpg" alt="mustang img" width="100%;"">
                         <div class="description">
                             <h3>Mustang Shelby GT500 2020</h3><br>
                             <p>
@@ -130,69 +241,71 @@
                                 <span>&#9656; HP: </span>760 @ 7,300 rpm
                             </p>
                         </div>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste? 
-                    </p>
+                <div class="column75">
+                    <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste? 
+                        </p>
+                    </div>
                 </div>
-                <hr>
             </div>
+            <h3>Mercedes</h3>
             <div class="row">
-                <h3>Mercedes</h3>
-                <hr>
-                <div class="galery" style="float: right; margin-left: 15px;">
+                <div class="column25" style="order: 2;">
+                    <div class="galery">
                         <img src="imagem/mgtr.jpg" alt="mercedes mgtr img">
                         <div class="description">
-                            <hr>
                             <h3>Mercedes-AMG GT/GTR 2020</h3><br>
                             <p>
                                 <Span>&#9656; Pricing: </Span>$163,895 min <br>
                                 <span>&#9656; HP: </span>469 @ 155 mph
                             </p>
                         </div>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    Mollitia tempore consectetur minima esse accusantium veniam officia iste?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
-                    adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
-                    </p>
+                <div class="column75" style="order: 1;"> 
+                    <div class="text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        Mollitia tempore consectetur minima esse accusantium veniam officia iste?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fugiat, 
+                        adipisci mollitia aspernatur, fugit, sequi quod distinctio explicabo inventore porro animi? 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <!--footer-->
     <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div>
