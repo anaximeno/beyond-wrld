@@ -58,9 +58,11 @@
             display: block;
             width: 100%;
             height: 100%;
+            padding: 5px;
             background-color: #1abc9c;
             color: white;
             border-radius: 0;
+            text-align: center;
         }
         aside h4{
             font-size: 0.85em;
@@ -77,6 +79,17 @@
         aside p{
             padding: 0 15px;
             text-align: center;
+            color: black;
+            text-indent: 20px;
+            font: 0.75em sans-serif;
+        }
+        aside h3{
+            text-align: center;
+            color: rgb(104, 18, 18);
+            font-size: 1.25em;
+        }
+        aside h3 span a{
+            color: rgb(51, 49, 49);
         }
 
         /**
@@ -129,6 +142,15 @@
             }
             aside{
                 border-radius: 15px 15px 0 0;
+            }
+            .one{
+                margin-bottom: 13%;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            .one{
+                margin-bottom: 0 !important;
             }
         }
         @media screen and (max-width:440px){
@@ -232,7 +254,7 @@
             <h3>Ford</h3>
             <div class="row">
                 <div class="column25">
-                    <div class="galery">
+                    <div class="galery one">
                         <img src="imagem/mustang.jpg" alt="mustang img" width="100%;"">
                         <div class="description">
                             <h3>Mustang Shelby GT500 2020</h3><br>
