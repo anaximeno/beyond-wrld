@@ -1,44 +1,41 @@
 /* simple and responsive grid*/
-
-.column{
-    float: left;
-    width: 33.33%;
-    padding: 15px;
+.row{
+    display: flex;
+    flex-wrap: wrap;
 }
-.column2{
-    float: left;
-    width: 50%;
-    padding: 15px;
-}
-.column75{
-    float: left;
-    width: 75%;
+.coumn20{
+    flex: 20%;
     padding: 15px;
 }
 .column25{
-    float: left;
-    width: 25%;
+    flex: 25%;
     padding: 15px;
 }
-.row::after{
-    content: '';
-    display: table;
-    clear: both;
+.column30{
+    flex: 30%;
+    padding: 15px;
+}
+.column33{
+    flex: 33.33%;
+    padding: 15px;
+}
+.column50{
+    flex: 50%;
+    padding: 15px;
+}
+.column70{
+    flex: 70%;
+    padding: 15px;
+}
+.column75{
+    flex: 75%;
+    padding: 15px;
 }
 
 /*responsive screen*/
 @media screen and (max-width: 700px){
-    .column{
-        width: 100% !important;
-    }
-    .column2{
-        width: 100% !important;
-    }
-    .column25{
-        width: 100% !important;
-    }
-    .column75{
-        width: 100% !important;
+    .row{
+        flex-direction: column;
     }
     .nav-list{
         font-size: 0.90em !important;
