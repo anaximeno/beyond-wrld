@@ -56,7 +56,7 @@
             height: 100%;
             width: 100%;
             background-color: #f1f1f1;
-            border-radius: 15px 0 15px 15px;
+            border-radius: 15px 0 0 15px;
             padding: 5px;
             text-align: center;
         }
@@ -81,8 +81,11 @@
         aside h4{
             text-align: left;
         }
-        aside h2{
+        aside h5{
             text-align: right;
+            color: white;
+            text-shadow: 3px .9px 1px black;
+            text-decoration: underline;
         }
         aside h3 a span{
             opacity: 0.0;
@@ -94,9 +97,17 @@
             opacity: 1;
             transform: translate(5px);
         }
-        /*footer*/
-        .footer{
-            border-radius: 15px 15px 0 0;
+        .wantside{
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 700px) {
+            aside{
+                border-radius: 15px 15px 0 0;
+            }
+            .wantside{
+                flex-direction: row !important;
+            }
         }
     </style>
 </head>
@@ -207,19 +218,25 @@
         <!--sidebar-->
         <div class="column25 aside">
             <aside>
-                <h2>...Watch More</h2>
+                <h5>...Watch More</h5>
                 <h3><a href="wanted.html">Wanted List <span>&raquo;</span></a></h3>
-                <h4>&#9760; Hiken no Ace</h4>
-                <img src="imagem/whereis.jpg" alt="wanted Ace">
-                <p>Wanted Portgas D. Ace lorem ipsum propisius 
-                azerty di humunculos et quertys sabatis abeta jut ganma
-                canon hibashira no Hiken(...)</p>
-                <h4>&#9760; Others Kaisoku</h4>
-                <img src="imagem/wanted.jpg" alt="wanted pirates">
-                <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
-                et suplicudo goferta dragon revoluciu decartuym amet mugi's
-                trip olation(...)</p>
-                <br>
+                <div class="row wantside">
+                    <div class="column50">
+                        <h4>&#9760; Hiken no Ace</h4>
+                        <img src="imagem/whereis.jpg" alt="wanted Ace">
+                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
+                        azerty di humunculos et quertys sabatis abeta jut ganma
+                        canon hibashira no Hiken(...)</p>
+                    </div>
+                    <div class="column50">
+                        <h4>&#9760; Others Kaisoku</h4>
+                        <img src="imagem/wanted.jpg" alt="wanted pirates">
+                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
+                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
+                        trip olation(...)</p>
+                    </div>
+                </div>
+                
                 <h3><a href="cars.html" target="_self">Cars <span>&raquo;</span></a></h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
                 elit. Corrupti fugiat, adipisci mollitia aspernatur,
