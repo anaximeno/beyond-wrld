@@ -66,12 +66,10 @@
             font: 0.75em sans-serif;
         }
         aside h3 a{
+            position: relative;
             text-align: center;
             color: rgb(104, 18, 18);
             font-size: 1.05em;
-        }
-        aside h3 a:hover{
-            text-decoration: blue underline;
         }
         aside a{
             color: rgb(51, 49, 49);
@@ -85,7 +83,16 @@
         aside h2{
             text-align: right;
         }
-
+        aside h3 a span{
+            opacity: 0.0;
+            position: absolute;
+            transform: translate(-15px);
+            transition: opacity 0.1s ease, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        aside h3 a:hover span{
+            opacity: 1;
+            transform: translate(5px);
+        }
         /*footer*/
         .footer{
             border-radius: 15px 15px 0 0;
@@ -200,7 +207,7 @@
         <div class="column25 aside">
             <aside>
                 <h2>...Watch More</h2>
-                <h3><a href="wanted.html">Wanted List</a></h3>
+                <h3><a href="wanted.html">Wanted List <span>&raquo;</span></a></h3>
                 <h4>&#9760; Hiken no Ace</h4>
                 <img src="imagem/whereis.jpg" alt="wanted Ace">
                 <p>Wanted Portgas D. Ace lorem ipsum propisius 
@@ -212,7 +219,7 @@
                 et suplicudo goferta dragon revoluciu decartuym amet mugi's
                 trip olation(...)</p>
                 <br>
-                <h3><a href="cars.html" target="_self">Cars</a></h3>
+                <h3><a href="cars.html" target="_self">Cars <span>&raquo;</span></a></h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
                 elit. Corrupti fugiat, adipisci mollitia aspernatur,
                 fugit, sequi quod distinctio explicabo inventore porro animi? 
