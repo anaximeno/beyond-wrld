@@ -31,14 +31,14 @@ body{
     padding: 8px 16px;
     text-align: center;
     border-bottom: 2px solid transparent;
-    transition: border-bottom .3s, background-color .2s;
+    transition: border-bottom .1s, background-color .2s;
 }
 .nav-list li > a:hover, dropbtn:hover{
     background-color: rgb(136, 133, 133);
-    border-bottom: 2px solid rgb(136, 133, 133);
+    border-bottom: 2.5px solid rgb(136, 133, 133);
 }
 .active{
-    border-bottom: 2px solid red !important;
+    border-bottom: 2.5px solid red !important;
 }
 a:link{
     text-decoration: none;
@@ -121,6 +121,19 @@ h1 a:hover{
 }
 h2{
     text-align: center;
+}
+@keyframes starer {
+    100% {
+        transform: rotate(360deg);
+    }
+
+    /* need to fix shadow */
+}
+
+h1 a span {
+    display: inline-block;
+    animation: 4s starer linear infinite;
+    animation-delay: 15s;
 }
 /* </title> */
 
