@@ -16,7 +16,8 @@
             z-index: -1;
             top: 0;
             left: 0;
-            filter: contrast(360px);
+            right: 0;
+            filter: blur(1.44px);
             object-fit: cover;
         }
         .p{
@@ -44,10 +45,14 @@
         h2#initial{
             margin-left: 50px;
             padding-bottom: 25px;
-            color: #fff;
-            font-size: 30px;
+            color: #f7074f;
+            font-size: 2.5em;
             text-transform: uppercase;
             text-align: left;
+            text-shadow: 2px 0 1.5px black;
+        }
+        #initial::first-letter{
+            color: #0084ff;
         }
         a{
             text-decoration: none;
@@ -59,7 +64,6 @@
         @media screen and (max-width: 700px){
             h2#initial{
                 margin-bottom: 20px !important;
-                color: red !important;
             }
             #fiximg{
                 width: 100% !important;
@@ -75,7 +79,7 @@
 <!--neck-->
 <body>
     <header>
-        <h1><a href="index.html" title="This is the namest &#128513;"><span>&#9734; </span>Beyond Wrld</a></h1>
+        <h1><a href="index.html" title="This is the namest &#128513;"><span>&#9734;</span> Beyond Wrld</a></h1>
         <h3>Under Construction...</h3>
     </header>
     <div class="nave">
@@ -98,7 +102,7 @@
         </nav>
     </div>
     <!---->
-    <img id="fiximg" src="imagem/fall.jpg" alt="imagem">
+    <img id="fiximg" src="imagem/byond.png" alt="imagem">
     <h2 id="initial">About</h2>
     <div class="p">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
