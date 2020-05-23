@@ -123,8 +123,25 @@ h2{
     text-align: center;
 }
 @keyframes starer {
+    0% {
+        transform: rotate(0deg);
+        text-shadow: 3px -3px 4px #af9d9d;
+    }
+    25% {
+        transform: rotate(90%);
+        text-shadow: -3px -3px 4px #af9d9d;
+    }
+    50% {
+        transform: rotate(180%);
+        text-shadow: -3px 3px 4px #af9d9d;
+    }
+    75% {
+        transform: rotate(270%);
+        text-shadow: 3px 3px 4px #af9d9d;
+    }
     100% {
         transform: rotate(360deg);
+        text-shadow: 3px -3px 4px #af9d9d;
     }
 
     /* need to fix shadow */
@@ -133,7 +150,7 @@ h2{
 h1 a span {
     display: inline-block;
     animation: 4s starer linear infinite;
-    animation-delay: 15s;
+    animation-delay: 20s;
 }
 /* </title> */
 
