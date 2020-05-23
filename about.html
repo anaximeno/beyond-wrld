@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="style/grid.css">
     <title>Beyond Wrld</title>
     <style>
+        body{
+            background-image: url('imagem/byond.png'); /* same as the comment below*/
+            background-size: 100% 100% !important;
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+        }
+        /*
         #fiximg{
-            width: 100%;
+            width: 100% !important;
             height: 100%;
             position: fixed;
             z-index: -1;
@@ -20,6 +27,7 @@
             filter: blur(1.44px);
             object-fit: cover;
         }
+        */
         .p{
             background-color: white;
             max-width: 100%;
@@ -61,17 +69,20 @@
             margin-bottom: 30%;
         }
 
-        @media screen and (max-width: 700px){
+        @media screen and (max-width: 650px){
             h2#initial{
                 margin-bottom: 20px !important;
             }
-            #fiximg{
-                width: 100% !important;
-                height: 100% !important;
-                object-fit: cover !important;
+            body {
+                background-image: url('imagem/bw.jpg');
             }
             .nav-list{
                 Margin-bottom: 200px;
+            }
+        }
+        @media only screen and (max-height: 412px) {
+            .nav-list{
+                margin-bottom: 0 !important;
             }
         }
     </style>
@@ -93,7 +104,7 @@
                     <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
                     <div class="dropdown-content">
                         <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
-                        <a href="https://www.animesvision.com.br/" target="_blank">Anime Vision</a>
+                        <a href="https://pt.erai-raws.info/anime-list/" target="_blank">Errai Raws</a>
                         <a href="#link3">Link 3</a>
                     </div>
                 </li>
@@ -101,8 +112,9 @@
             </ul>
         </nav>
     </div>
-    <!---->
-    <img id="fiximg" src="imagem/byond.png" alt="imagem">
+
+    <!--<img id="fiximg" src="imagem/byond.png" alt="imagem"> just another example!-->
+
     <h2 id="initial">About</h2>
     <div class="p">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
