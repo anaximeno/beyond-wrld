@@ -43,13 +43,22 @@
     .nav-list li a img{
        max-width: 29px;
     }
+    .nav-list li > a:not(#homeicon){
+    height: 35px;
+    padding-top: 5px;
+    }
+    #homeicon{
+    padding: 0px;
+    padding-top: 1px;
+    height: 35px;
+    }
     header h3{
         position: absolute;
         top: 0;
         right: 0;
     }
 }
-@media screen and (max-width:440px){
+@media screen and (max-width:444px){
     .nave{
         position: static !important;
     }
@@ -59,4 +68,5 @@
     h1{
         text-align: center !important;
     }
+    h1 a:hover{text-shadow: none;}
 }
