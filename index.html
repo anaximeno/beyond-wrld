@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Anaxímeno Brito">
-    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans&family=Playfair+Display:wght@500&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/grid.css">
     <title>Beyond Wrld</title>
@@ -34,17 +34,21 @@
             font-weight: bolder;
         }
         .galery{
-            border: 2px solid #504c4c;
-            max-width: 80% !important;
+            max-width: 100%;
             display: block;
             margin-left: auto;
             margin-right: auto;
             background-color: deepskyblue;
+            box-shadow: 2px 0px 15px 3px #999;
         }
         .desc{
             padding: 5px;
             text-transform: capitalize;
             text-align: center;
+        }
+
+        h2{
+            font-family: 'Josefin Sans', sans-serif;
         }
 
         /*Aside*/
@@ -70,7 +74,8 @@
             position: relative;
             text-align: center;
             color: rgb(104, 18, 18);
-            font-size: 1.05em;
+            font-size: 1.25em;
+            font-family: 'Josefin Sans', sans-serif;
         }
         aside a{
             color: rgb(51, 49, 49);
@@ -80,12 +85,17 @@
         }
         aside h4{
             text-align: left;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-family: 'Indie Flower', cursive;
         }
         aside h5{
             text-align: right;
             color: white;
-            text-shadow: 3px .9px 1px black;
+            font-weight: thin;
+            text-shadow: 3px .9px 2px black;
             text-decoration: underline;
+            font-family: 'Varela Round', sans-serif
         }
         aside h3 a span{
             opacity: 0.0;
@@ -120,12 +130,12 @@
     <div class="nave">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html" class="active" style="padding: 0;"><img src="imagem/home2x.png" alt="Home" width="35px"></a></li>
+                <li><a href="index.html" class="active" id="homeicon"><img src="imagem/home2x.png" alt="Home"></a></li>
                 <li><a href="cars.html">Cars</a></li>
                 <li><a href="wanted.html">Wanted</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <a href="javascript:void(0)" class="dropbtn">Sites</a>
                     <div class="dropdown-content">
                         <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
                         <a href="https://pt.erai-raws.info/anime-list/" target="_blank">Errai Raws</a>
@@ -139,27 +149,6 @@
     <!---->
     <div class="row">
         <div class="column75">
-            <h2>Three Columns</h2>
-            <div class="row">
-                <div class="column33">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
-                </div>
-                <div class="column33">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
-                </div>
-                <div class="column33">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
-                </div>
-            </div>
             <h2>Two Columns</h2>
             <div class="row">
                 <div class="column50">
@@ -167,13 +156,9 @@
                     Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                     et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
                     id architecto assumenda hic laborum dicta.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
                     <div class="galery">
                         <a href="https://www.crunchyroll.com/pt-pt/dragon-ball-super" target="_blank"><img src="imagem/thefight.png" alt="thefight img"></a>
-                        <div class="desc"><h3>The Fight</h3></div>
+                        <div class="desc"><h3>F from Fighters</h3></div>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                     Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
@@ -181,10 +166,6 @@
                     id architecto assumenda hic laborum dicta.</p>    
                 </div>
                 <div class="column50">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                     Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                     et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
@@ -199,7 +180,7 @@
                     id architecto assumenda hic laborum dicta.adipisicing elit. Non veri possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil et kaido zuplicus katalea IMversos infernus...</p>    
                 </div>
             </div>
-            <h2>One Column</h2>
+            <h2>The man who burns</h2>
             <div class="row">
                 <div class="galery">
                     <a href="https://www.crunchyroll.com/pt-br/demon-slayer-kimetsu-no-yaiba" target="_blank"><img src="imagem/rengoku.jpg" alt="Fire hashira rengoku"></a>
@@ -208,8 +189,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                 et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                id architecto assumenda hic laborum dicta.</p>
-                <p>Lorem ipsudis ring of lordor f to gordor to gordor to gordor dolor sit amet consectetur, adipisicing elit. 
+                id architecto assumenda hic laborum dicta lorem ipsudis ring of lordor f to gordor to gordor to gordor dolor sit amet consectetur, adipisicing elit. 
                 Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                 et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
                 id architecto assumenda hic laborum dicta.</p>        

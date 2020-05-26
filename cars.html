@@ -5,6 +5,7 @@
     <meta name="author" content="Anaxímeno Brito">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans&family=Playfair+Display:wght@500&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Beyond Wrld</title>
@@ -26,6 +27,10 @@
         }
         h3{
             text-align: center;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Allerta Stencil', serif;
         }
         .principal{
             margin-top: 30px;
@@ -124,6 +129,9 @@
         .column75{
             flex:75%
         }
+        .column100{
+            flex: 100%;
+        }
 
         /*RWD*/
         @media screen and (max-width: 700px) {
@@ -183,12 +191,12 @@
     <div class="nave">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html" style="padding: 0;"><img src="imagem/home2x.png" alt="Home" width="35px"></a></li>
+                <li><a href="index.html" id="homeicon"><img src="imagem/home2x.png" alt="Home"></a></li>
                 <li><a href="cars.html" class="active">Cars</a></li>
                 <li><a href="wanted.html">Wanted</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <a href="javascript:void(0)" class="dropbtn">Sites</a>
                     <div class="dropdown-content">
                         <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
                         <a href="https://pt.erai-raws.info/anime-list/" target="_blank">Errai Raws</a>
@@ -201,61 +209,7 @@
     </div>
     <!---->
     <div class="row">
-        <div class="column30">
-            <aside>
-                <h3>&#9760; <span><a href="wanted.html">Wanted List</a></span> &#9760</h3>
-                <div class="row side">
-                    <div class="column33">
-                        <h4>&raquo; Hiken no Ace</h4>
-                        <img src="imagem/whereis.jpg" alt="wanted Ace">
-                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
-                        azerty di humunculos et quertys sabatis abeta jut ganma
-                        canon hibashira no Hiken (...)</p>
-                    </div>
-                    <div class="column33">
-                        <h4>&raquo; Others Kaisoku</h4>
-                        <img src="imagem/wanted.jpg" alt="wanted pirates">
-                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
-                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
-                        trip olation Lorem ipsum dolor sit amet, consect(...)</p>
-                    </div>
-                    <div class="column33">
-                        <h4>&raquo; The're Wanted</h4>
-                        <img src="imagem/want.jpeg" alt="wanted img">
-                        <p>Wanted the y lorem east blue xablardom zombir fortadus minatus nakaze
-                        et supdo gerta drito revoliu decartuym onara set amet mugi's
-                        trip olation Lorem i have dolor sit amet, consectetur (...)</p>
-                    </div>
-                </div>
-                <div class="row side">
-                    <div class="column33" style="order: 1;">
-                        <h4>&raquo; Others Kaisoku</h4>
-                        <img src="imagem/wanted.jpg" alt="wanted pirates">
-                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
-                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
-                        trip olation Lorem ipsum dolor sit amet, consectetur(...)</p>
-                    </div>
-                    <div class="column33" style="order: 3;">
-                        <h4>&raquo; Hiken no Ace</h4>
-                        <img src="imagem/whereis.jpg" alt="wanted Ace">
-                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
-                        azerty di humunculos et quertys sabatis abeta jut ganma
-                        canon hibashira no Hiken(...)</p>
-                    </div>
-                    <div class="column33" style="order: 2;">
-                        <h4>&raquo; The're Wanted</h4>
-                        <img src="imagem/want.jpeg" alt="wanted img">
-                        <p>Wanted the y lorem east blue xablardom zombir fortadus minatus nakaze
-                        et supdo gerta drito revoliu decartuym onara set amet mugi's
-                        trip olation Lorem i have dolor sit amet(...)</p>
-                    </div>
-                </div>
-                
-                
-            </aside>
-        </div>
-
-        <div class="column70">
+                <div class="column100">
             <h2 class="principal">Amazing Cars</h2>
             <br>
             <h3>Ford</h3>
