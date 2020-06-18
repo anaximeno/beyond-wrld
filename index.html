@@ -10,8 +10,7 @@
     <title>Beyond Wrld</title>
     <style>
         p{
-            text-align: justify;
-            font-size: 18px;
+            font-size: 14px;
             text-align: justify;
             /* Determine spacing between the letters!*/
             letter-spacing: 1px;
@@ -24,11 +23,9 @@
             /* identation for the first paragraph of a text*/
             text-indent: 50px;
         }
-        a{
-            text-decoration: none;
-        }
         p a{
-            color: chartreuse;
+            color: inherit;
+            text-decoration: underline !important;
         }
         .bold{
             font-weight: bolder;
@@ -38,13 +35,12 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            background-color: deepskyblue;
-            box-shadow: 2px 0px 15px 3px #999;
         }
         .desc{
             padding: 5px;
             text-transform: capitalize;
-            text-align: center;
+            text-align: left;
+            color: #bbb;
         }
 
         h2{
@@ -66,7 +62,7 @@
         }
         aside p{
             color: black;
-            text-align: justify;
+            text-align: center;
             text-indent: 20px;
             font: 0.75em sans-serif;
         }
@@ -124,33 +120,46 @@
 <!-- neck -->
 <body>
     <header>
-        <h1><a href="index.html" title="This is the namest &#128513;"><span>&#9734;</span> Beyond Wrld</a></h1>
-        <h3>Under Construction...</h3>
+        <h1><a href="index.html" title="This is the namest"><span>B</span>eyond <span>W</span>rld</a></h1>
     </header>
-    <div class="nave">
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.html" class="active" id="homeicon"><img src="imagem/home2x.png" alt="Home"></a></li>
-                <li><a href="cars.html">Cars</a></li>
-                <li><a href="wanted.html">Wanted</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Sites</a>
-                    <div class="dropdown-content">
-                        <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
-                        <a href="https://pt.erai-raws.info/anime-list/" target="_blank">Errai Raws</a>
-                        <a href="https://www.github.com/" target="_blank">GitHub</a>
-                        <a href="https://anaximenobrito.github.io/AX2MK-page/index.html">AX2MK</a>
-                    </div>
-                </li>
-                <li style="float: right;"><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+    <div class="navBar">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" id="home">
+                <svg class="bi bi-house-fill" width="1.15em" height="1.15em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                    <path fill-rule="evenodd"
+                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                </svg>
+            </a>
+            <a href="cars.html">Cars</a>
+            <a href="wanted.html">Wanted</a>
+            <a href="contacts.html">Contacts</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="drop()" title="Sites I Recommend">Sites</a>
+                <div class="dropdown-content" id="dc">
+                    <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+                    <a href="https://pt.erai-raws.info/anime-list/" target="_blank">Erai Raws</a>
+                    <a href="https://www.github.com/" target="_blank">GitHub</a>
+                </div>
+            </div>
+    
+            <a href="about.html" class="about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="barAnime(this), respBar()" id="menu">
+                <div class="container">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </a>
+        </div>
     </div>
+    
     <!---->
     <div class="row">
         <div class="column75">
-            <h2>Two Columns</h2>
+            <h2>Anime Warriors</h2>
             <div class="row">
                 <div class="column50">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -228,7 +237,10 @@
         </div>
     </div>
     
-    </div>
     <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div> 
+
+    <script src="js/drop.js"></script>
+    <script src="js/baranime.js"></script>
+    <script src="js/respBar.js"></script>
 </body>
 </html>
