@@ -12,8 +12,7 @@ body::-webkit-scrollbar-track{
     background-color: #444;
 }
 body::-webkit-scrollbar-thumb{
-   background: deepskyblue;
-   border-radius: 20px;
+   background: linear-gradient(to bottom, #dc3545, deepskyblue);
 }
 /* <navegator> */
 .container {
@@ -84,7 +83,9 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 .active{
-    background: #1abc9c}
+    color: #dc3545 !important;
+}
+    
 a:link{
     text-decoration: none;
 }
@@ -196,13 +197,15 @@ h2{text-align: center;}
 /* <footer> */
 .footer{
 text-align: center;
-background-color: #ddd;
+background-color: #1abc8d;
 overflow: visible;
 color: black;
-height: 20px;
 margin: 0;
 padding: 30px;
 font-size: 0.95em;
+}
+footer::before{
+    content: 'Copyright ';
 }
 /* </footer> */
 
