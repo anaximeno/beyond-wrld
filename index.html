@@ -59,6 +59,11 @@
 
         h2{
             font-family: 'Josefin Sans', sans-serif;
+            font-size: 42px;
+            background: linear-gradient(to right, yellow, red);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /*Aside*/
@@ -80,14 +85,10 @@
             font: 0.75em sans-serif;
         }
         aside h3 a{
-            position: relative;
             text-align: center;
-            color: rgb(104, 18, 18);
+            color: red;
             font-size: 1.25em;
             font-family: 'Josefin Sans', sans-serif;
-        }
-        aside a{
-            color: rgb(51, 49, 49);
         }
         aside img{
             max-width: 50%;
@@ -108,10 +109,10 @@
             font-family: 'Varela Round', sans-serif
         }
         aside h3 a span{
-            opacity: 0.0;
             position: absolute;
+            opacity: 0;
             transform: translate(-15px);
-            transition: opacity 0.1s ease, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: opacity .1s ease, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         aside h3 a:hover span{
             opacity: 1;
