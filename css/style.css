@@ -101,6 +101,14 @@ a:link{
       float: right;
       display: block;
     }
+    .dropdown-content{
+        position: relative !important;
+        z-index: 0;
+        border-radius: 0 !important;
+    }
+    .dropdown-content a:hover{
+        border-radius: 0 !important;
+    }
   }
   
   @media screen and (max-width: 500px) {
