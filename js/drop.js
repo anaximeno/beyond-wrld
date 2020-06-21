@@ -1,8 +1,8 @@
 function drop() {
-    var dc = document.getElementById('dc').style.display;
-    if( dc !== 'block') {
-        document.getElementById('dc').style.display = 'block';
+    var x = document.getElementById('dc');
+    if( x.style.display !== 'block') {
+        x.style.display = 'block';
     } else {
-        document.getElementById('dc').style.display = 'none';
+        x.style.display = 'none';
     }
 }
