@@ -25,6 +25,7 @@
             line-height: 1.5;
             /*Word Spacing determine the spacing between the words!*/
             word-spacing: 1px;
+            color: #fff;
         }
         body{
             background-color: #555;
@@ -48,19 +49,19 @@
             margin-right: auto;
         }
         .galery img:hover{
-            outline: #1e90ff 3px solid;
+            outline: #eb8934 3px solid;
         }
         .desc{
             padding: 5px;
             text-transform: capitalize;
             text-align: left;
-            color: #bbb;
+            color: #eba834;
         }
 
         h2{
             font-family: 'Josefin Sans', sans-serif;
             font-size: 42px;
-            background: linear-gradient(to right, yellow, red);
+            background: linear-gradient(to bottom, yellow, orange, red);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -74,19 +75,18 @@
             margin: 0;
             height: 100%;
             width: 100%;
-            background-color: #f9f9f9bb;
-            border-radius: 0;
+            background-color: #dbdbdb;
             padding: 5px;
             text-align: center;
         }
         aside p{
             color: black;
-            text-align: center;
-            font: 0.75em sans-serif;
+            text-align: left;
+            font: 0.8rem sans-serif;
         }
         aside h3 a{
             text-align: center;
-            color: red;
+            color: #ff8800;
             font-size: 1.25em;
             font-family: 'Josefin Sans', sans-serif;
         }
@@ -98,7 +98,7 @@
             font-size: 1rem;
             letter-spacing: 2px;
             font-family: 'Indie Flower', cursive;
-            color: deeppink;
+            color: #eba834;
         }
         aside h5{
             text-align: right;
@@ -121,6 +121,9 @@
         .wantside{
             flex-direction: column;
         }
+        .main{
+            height: 100%;
+        }
 
         @media screen and (max-width: 700px) {
             aside{
@@ -139,9 +142,9 @@
     </header>
     <div class="navBar">
         <div class="topnav" id="myTopnav">
-            <a href="index.html" id="home" class="active">
+            <a href="index.html" id="home" class="active" title="current page">
                 <svg class="bi bi-house-fill" width="1.15em" height="1.15em" viewBox="0 0 16 16" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" alt="Home">
                     <path fill-rule="evenodd"
                         d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                     <path fill-rule="evenodd"
@@ -173,88 +176,63 @@
     </div>
     
     <!---->
-    <div class="row">
-        <div class="column75">
-            <h2>Anime Warriors</h2>
-            <div class="row">
-                <div class="column50">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>
+    <div class="main">
+        <div class="row">
+            <div class="column75">
+                <h2>The man who burns</h2>
+                <div class="row">
                     <div class="galery">
-                        <a href="https://www.crunchyroll.com/pt-pt/dragon-ball-super" target="_blank"><img src="imagem/thefight.png" alt="thefight img"></a>
-                        <div class="desc"><h3>F from Fighters</h3></div>
+                        <img src="imagem/rengoku.jpg" alt="Fire hashira rengoku">
+                        <div class="desc"><h3>the man of determination</h3></div>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                     Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                     et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.</p>    
-                </div>
-                <div class="column50">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    id architecto assumenda hic laborum dicta lorem ipsudis ring of lordor f to gordor to gordor to gordor dolor sit amet consectetur, adipisicing elit. 
                     Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
                     et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
                     id architecto assumenda hic laborum dicta.</p>        
-                    <div class="galery">
-                        <a href="https://www.crunchyroll.com/pt-br/one-piece" target="_blank"><img src="imagem/whowins.jpg" alt="img Katakuri vs Luffy"></a>
-                        <div class="desc"><h3>Do you wanna know who whins?</h3></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Non veritatis <a href="https://readera.org/en/book-reader" title="Should you click?" target="_blank">ReadEra</a> nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                    et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                    id architecto assumenda hic laborum dicta.adipisicing elit. Non veri possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil et kaido zuplicus katalea IMversos infernus...</p>    
                 </div>
             </div>
-            <h2>The man who burns</h2>
-            <div class="row">
-                <div class="galery">
-                    <a href="https://www.crunchyroll.com/pt-br/demon-slayer-kimetsu-no-yaiba" target="_blank"><img src="imagem/rengoku.jpg" alt="Fire hashira rengoku"></a>
-                    <div class="desc"><h3>the man of determination</h3></div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                id architecto assumenda hic laborum dicta lorem ipsudis ring of lordor f to gordor to gordor to gordor dolor sit amet consectetur, adipisicing elit. 
-                Non veritatis nulla possimus <span class="bold">bolded</span> officiis id totam? Debitis laboriosam nihil 
-                et aut mollitia <a href="https://youtu.be/pOHOE_YQsSY" target="_blank" title="click there!">dolore</a> expedita? Ducimus, 
-                id architecto assumenda hic laborum dicta.</p>        
+            <!--sidebar-->
+            <div class="column25 aside">
+                <aside>
+                    <h5>...Watch More</h5>
+                    <h3><a href="wanted.html">Wanted List <span>&raquo;</span></a></h3>
+                    <div class="row wantside">
+                        <div class="column50">
+                            <h4>&#9760; Hiken no Ace</h4>
+                            <p>Wanted Portgas D. Ace lorem ipsum propisius 
+                            azerty di humunculos et quertys sabatis abeta jut ganma
+                            canon hibashira no Hiken(...)</p>
+                        </div>
+                        <div class="column50">
+                            <h4>&#9760; Others Kaisoku</h4>
+                            <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
+                            et suplicudo goferta dragon revoluciu decartuym amet mugi's
+                            trip olation(...)</p>
+                        </div>
+                    </div>
+                    
+                    <h3><a href="cars.html" target="_self">Cars <span>&raquo;</span></a></h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
+                    elit. Corrupti fugiat, adipisci mollitia aspernatur,
+                    fugit, sequi quod distinctio explicabo inventore porro animi? 
+                    Mollitia tempore consectetur minima esse 
+                    accusantium veniam officia iste? Lorem ipsum dolor, sit amet consectetur(...)</p>
+                </aside>
             </div>
         </div>
-        <!--sidebar-->
-        <div class="column25 aside">
-            <aside>
-                <h5>...Watch More</h5>
-                <h3><a href="wanted.html">Wanted List <span>&raquo;</span></a></h3>
-                <div class="row wantside">
-                    <div class="column50">
-                        <h4>&#9760; Hiken no Ace</h4>
-                        <p>Wanted Portgas D. Ace lorem ipsum propisius 
-                        azerty di humunculos et quertys sabatis abeta jut ganma
-                        canon hibashira no Hiken(...)</p>
-                    </div>
-                    <div class="column50">
-                        <h4>&#9760; Others Kaisoku</h4>
-                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
-                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
-                        trip olation(...)</p>
-                    </div>
-                </div>
-                
-                <h3><a href="cars.html" target="_self">Cars <span>&raquo;</span></a></h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
-                elit. Corrupti fugiat, adipisci mollitia aspernatur,
-                fugit, sequi quod distinctio explicabo inventore porro animi? 
-                Mollitia tempore consectetur minima esse 
-                accusantium veniam officia iste? Lorem ipsum dolor, sit amet consectetur(...)</p>
-            </aside>
-        </div>
+        
+        <div class="footer">
+            <footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer>
+        </div> 
     </div>
     
-    <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div> 
 
     <script src="js/drop.js"></script>
     <script src="js/baranime.js"></script>
     <script src="js/respBar.js"></script>
+
 </body>
 </html>

@@ -20,6 +20,10 @@
     flex: 33.33%;
     padding: 15px;
 }
+.column35{
+    flex: 35%;
+    padding: 15px;
+}
 .column40{
     flex: 40%;
     padding: 15px;
@@ -30,6 +34,10 @@
 }
 .coumn60{
     flex: 60%;
+    padding: 15px;
+}
+.column65{
+    flex: 65%;
     padding: 15px;
 }
 .column70{

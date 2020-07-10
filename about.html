@@ -18,8 +18,8 @@
     <meta name="theme-color" content="#ffffff">
     <style>
         body{
-            background-image: linear-gradient(to right, deeppink, deepskyblue);
-            background-size: 100% 100%;
+            background-image: radial-gradient(#443391, #421af5, #1bac9c);
+            background-size: 100vw 100vh;
             background-attachment: fixed; 
             background-repeat: no-repeat;
         }
@@ -32,7 +32,8 @@
             max-width: 100%;
             margin: auto 0;
             box-sizing: border-box;
-            border-radius: 0 200px 0 0;
+            border-radius: 50px 200px 0 0;
+            border: 4px solid #1abc8d;
             overflow: visible;
         }
         .p p{
@@ -50,14 +51,18 @@
             padding-bottom: 20px;
         }
         h2#initial{
-            margin-left: 50px;
             padding-bottom: 25px;
-            color: #fff;
+            color: lightblue;
+            text-shadow: 0px 0px 0px blue,
+                         0px 0px 2px white,
+                         0px 0px 2px white,
+                         0px 0px 2px white,
+                         0px 0px 4px blue;
             font-weight: bolder;
-            font-size: 2.5em;
+            font-size: 2.5rem;
             text-transform: uppercase;
-            text-align: left;
-            letter-spacing: 2px;
+            text-align: center;
+            letter-spacing: 20px;
         }
         a{ 
             text-decoration: none;
@@ -75,7 +80,6 @@
             }
             .p{
                 border-radius: 70px 70px 0 0 !important;
-                border: 4px double #1abc8d;
             }
         }
         @media only screen and (max-height: 412px) {
@@ -114,7 +118,7 @@
                 </div>
             </div>
     
-            <a href="about.html" class="about active">About</a>
+            <a href="about.html" class="about active" title="current page">About</a>
             <a href="javascript:void(0);" class="icon" onclick="barAnime(this), respBar()" id="menu">
                 <div class="container">
                     <div class="bar1"></div>
@@ -132,60 +136,36 @@
         suscipit debitis id numquam <br> modi fuga architecto? 
         Iste itaque obcaecati mollitia, consequatur <br> laboriosam voluptatibus nemo!
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facilis, dolorem, odit veritatis quis corrupti officiis 
-        suscipit debitis id numquam modi fuga architecto? 
-        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facilis, dolorem, odit veritatis quis corrupti officiis 
-        suscipit debitis id numquam modi fuga architecto? 
-        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facilis, dolorem, odit veritatis quis corrupti officiis 
-        suscipit debitis id numquam modi fuga architecto? 
-        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facilis, dolorem, odit veritatis quis corrupti officiis 
-        suscipit debitis id numquam modi fuga architecto? 
-        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facilis, dolorem, odit veritatis quis corrupti officiis 
-        suscipit debitis id numquam modi fuga architecto? 
-        Iste itaque obcaecati mollitia, consequatur laboriosam voluptatibus nemo!
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Facere labore accusantium recusandae distinctio maiores quas expedita eligendi, 
-        aperiam, necessitatibus possimus consequuntur optio iusto. 
-        Reiciendis repellendus, pariatur error ad explicabo et.</p>        
+        Vestibulum elit ex, facilisis vitae erat quis, finibus aliquet odio. 
+        Sed vitae diam vel ante egestas iaculis at sed lectus. 
+        Aenean mattis nisi nec ipsum vulputate feugiat. Maecenas ullamcorper ligula est, 
+        in molestie magna pretium vitae. Fusce non faucibus ex. 
+        Vestibulum imperdiet odio convallis nisl hendrerit porta. Aenean a diam eu risus varius sollicitudin. Curabitur id orci suscipit, 
+        finibus lacus sed, convallis diam. Sed sed pulvinar mi. In molestie ac erat at ullamcorper.
+        Nullam dignissim interdum ante et bibendum. 
+        Quisque id tortor tempor, posuere urna at, blandit sem.++
+        Phasellus gravida nunc dolor, ac accumsan mi hendrerit vitae. Pellentesque tincidunt enim purus, 
+        id volutpat dui varius nec. Proin placerat metus eu suscipit facilisis.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus et congue magna. 
+        Curabitur pulvinar ante sit amet rutrum bibendum. Cras tristique consectetur nisl, quis maximus orci viverra et. 
+        Suspendisse pellentesque in est consectetur tincidunt.
+        Quisque sit amet turpis vitae purus ultricies varius. Curabitur neque dui, vestibulum et est eget, 
+        dignissim scelerisque erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Nulla auctor nibh eu ipsum egestas convallis. Aliquam luctus est pretium, mollis magna hendrerit, ultrices dui.
+        Etiam dignissim laoreet orci, eget dictum nunc consectetur vitae. Integer eget aliquam dolor. Morbi auctor molestie interdum.
+        Maecenas vulputate erat nibh, sit amet tempor nisl egestas nec. Sed ultrices euismod odio, sit amet maximus ligula dignissim id. 
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Duis a semper eros. Sed eu libero eros. Quisque erat sem, iaculis in mi id, elementum laoreet erat. Morbi mauris tortor
+        , molestie at auctor ac, aliquam et mi. Ut euismod vel risus et pretium. Vestibulum aliquam a velit eget blandit.
+        Nulla dapibus augue at ligula dictum dapibus. Cras id tellus id felis ultrices ullamcorper. Donec sagittis vulputate nisi, a vulputate erat finibus a.
+        Duis orci orci, congue in aliquam quis, luctus vel arcu. Cras mauris urna, gravida quis aliquam at, posuere at magna.
+        Vivamus bibendum leo ut odio mattis, eget sodales dui feugiat. Curabitur eget pulvinar tellus, aliquam interdum tortor. 
+        Nam venenatis velit in sollicitudin pretium. Suspendisse eu finibus diam. Fusce euismod erat eu quam eleifend, quis aliquam lectus dignissim.
+        Curabitur neque sem, ultrices sit amet lobortis non, dapibus nec ipsum. Maecenas eget semper ligula. Aenean finibus imperdiet purus.
+        Vestibulum posuere dui in elit lacinia auctor. Proin in est rhoncus, viverra nisi eu, lacinia ex. Proin risus augue, aliquam in ipsum sed, rhoncus lacinia ligula. 
+        Duis at urna ac ligula vehicula molestie. Vivamus feugiat tempor risus.
+        </p>        
     </div>
     <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div>
     <script src="js/drop.js"></script>
