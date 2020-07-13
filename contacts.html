@@ -17,14 +17,14 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
-       
+
     </style>
 </head>
 <!--neck-->
 <body>
     <!--header and topnav-->
     <header>
-        <h1><a href="index.html" title="This is the namest">Beyond Wrld</a></h1>
+        <h1><a href="index.html">Beyond Wrld</a></h1>
     </header>
     <div class="navBar">
         <div class="topnav" id="myTopnav">
@@ -49,7 +49,7 @@
                     <a href="https://anaximenobrito.github.io/AX2MK-page/index.html" target="_self">AX2MK</a>
                 </div>
             </div>
-    
+
             <a href="about.html" class="about">About</a>
             <a href="javascript:void(0);" class="icon" onclick="barAnime(this), respBar()" id="menu">
                 <div class="container">
@@ -66,9 +66,15 @@
 
 
     <!--footer-->
-    <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div>
+    <div class="footer"><footer>&copy; 2020 Beyond the Wrld AX2MK #anaximenobrito</footer></div>
     <script src="js/drop.js"></script>
     <script src="js/baranime.js"></script>
     <script src="js/respBar.js"></script>
+    <script type="text/javascript">
+        for(i = 1; i < 4; i++) {
+          var x = document.querySelectorAll('div.bar' + i)[0];
+          x.style.background = 'blue';
+        }
+    </script>
 </body>
 </html>

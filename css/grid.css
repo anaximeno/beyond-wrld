@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     flex: 1;
 }
-.coumn20{
+.column20{
     flex: 20%;
     padding: 15px;
 }
@@ -48,9 +48,15 @@
     flex: 75%;
     padding: 15px;
 }
-
+.column80{
+  flex: 80%;
+  padding: 15px;
+}
 /*responsive screen*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
+    html{
+        font-size: 10px;
+    }
     .row{
         flex-direction: column;
     }
@@ -79,6 +85,9 @@
     }
 }
 @media screen and (max-width:460px){
+    html{
+        font-size: 8px;
+    }
     .nave{
         position: static !important;
     }
@@ -86,12 +95,6 @@
         float: none !important;
     }
     h1{
-        text-align: center !important;
-    }
-    h1 a:hover{text-shadow: 3px -3px 0px #111,
-                            2px -2px 0px #111,
-                            1px -1px 1px #111,
-                            0.5px -0.5px 0px #111,
-                            0.2px -0.2px 0px #111;
+      top: 5px;
     }
 }

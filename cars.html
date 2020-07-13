@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans&family=Playfair+Display:wght@500&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
     <title>Beyond Wrld</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -18,16 +18,22 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+        body{
+            background-color: #555;
+        }
+        .text p{
+            color: white;
+        }
         /*galery imgs*/
         .galery{
             max-width: 100%;
             margin: 15px;
             background-color: dodgerblue;
             box-sizing: border-box;
-            border: 2px solid #0a6fd3;
+            border: 2px solid dodgerblue;
         }
         .galery img{
-            transition: filter .3s linear;
+            width: 100%;
         }
         .galery img:hover{
             cursor: pointer;
@@ -41,12 +47,14 @@
         }
         .principal{
             margin-top: 30px;
-            color: #f00;
+            color: #15ff8a;
             letter-spacing: 3px;
-            font-size: 2em;  
+            font-size: 2.8rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         .row > div > h3{
-            font-size: 1.5em;
+            font-size: 2.3rem;
+            color: #0acce6;
         }
         .row > div > h3::first-letter{
             color: red;
@@ -70,56 +78,90 @@
             margin-left: 15px;
             font-weight: 800;
         }
-        
-        /*sideinfo*/
+
+        /*Aside*/
+        .aside{
+            padding: 0;
+        }
         aside{
             margin: 0;
-            display: block;
-            width: 100%;
             height: 100%;
+            width: 100%;
+            background-color: #eee;
             padding: 5px;
-            background-color: #1abc9c;
-            color: white;
-            border-radius: 0 15px 15px 0;
             text-align: center;
-        }
-        aside h4{
-            font-size: 0.85em;
-        }
-        aside h3 a:hover{
-            text-decoration: underline white;
-        }
-        aside img{
-            padding: 0 15px;
-            max-width: 100%;
-            height: auto;
-            object-fit: fill;
+            border-left: 3px solid #1abc9c;
+            border-right: 3px solid #1abc9c;
         }
         aside p{
-            padding: 0 15px;
-            text-align: center;
             color: black;
-            text-indent: 20px;
-            font: 0.75em sans-serif;
+            text-align: left;
+            font: 0.8rem sans-serif;
         }
-        aside h3{
+        aside h3 a{
             text-align: center;
-            color: rgb(104, 18, 18);
+            color: #ff8800;
             font-size: 1.25em;
+            font-family: 'Josefin Sans', sans-serif;
         }
-        aside h3 span a{
-            color: rgb(51, 49, 49);
+        #side{
+            padding: 0 !important;
         }
-
+        aside img{
+            max-width: 50%;
+        }
+        aside h4{
+            text-align: left;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-family: 'Indie Flower', cursive;
+            color: #eba834;
+        }
+        aside h5{
+            text-align: left;
+            color: white;
+            font-weight: thin;
+            text-shadow: 3px .9px 2px black;
+            text-decoration: underline;
+            font-family: 'Varela Round', sans-serif
+        }
+        aside h3 a span{
+            position: absolute;
+            opacity: 0;
+            transform: translate(-15px);
+            transition: opacity .1s ease, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        aside h3 a:hover span{
+            opacity: 1;
+            transform: translate(3px);
+        }
+        .wantside{
+            flex-direction: column;
+        }
+        .notice div{
+            font-size: 0.87rem;
+        }
         /*RWD*/
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 1000px) {
+            .column100 .row{
+                flex-direction: column
+                ;
+            }
+            .column40{
+                order: 2 !important;
+            }
+            .column50{
+                order: 1 !important;
+            }
+        }
+        @media screen and (max-width: 800px) {
             .row:not(.side){
                 flex-direction: column !important;
             }
-            .column30, .column75{
+            .column20{
                 order: 2 !important;
             }
-            .columns70, .column25{
+            .column80{
                 order: 1 !important;
             }
             .nav-list{
@@ -163,7 +205,7 @@
 <body>
     <!--header and topnav-->
     <header>
-        <h1><a href="index.html" title="This is the namest">Beyond Wrld</a></h1>
+        <h1><a href="index.html">Beyond Wrld</a></h1>
     </header>
     <div class="navBar">
         <div class="topnav" id="myTopnav">
@@ -188,7 +230,7 @@
                     <a href="https://anaximenobrito.github.io/AX2MK-page/index.html" target="_self">AX2MK</a>
                 </div>
             </div>
-    
+
             <a href="about.html" class="about">About</a>
             <a href="javascript:void(0);" class="icon" onclick="barAnime(this), respBar()" id="menu">
                 <div class="container">
@@ -200,134 +242,218 @@
         </div>
     </div>
     <!---->
-    <div class="row">
+    <div class="row main">
+        <div class="column20" id="side">
+            <aside>
+                <h5>...Watch More</h5>
+                <h3><a href="wanted.html">Wanted List <span>&raquo;</span></a></h3>
+                <div class="row wantside">
+                    <div class="column50">
+                        <h4>&#9760; Hiken no Ace</h4>
+                        <p>Wanted Portgas D. Ace lorem ipsum propisius
+                        azerty di humunculos et quertys sabatis abeta jut ganma
+                        canon hibashira no Hiken(...)</p>
+                    </div>
+                    <div class="column50">
+                        <h4>&#9760; Others Kaisoku</h4>
+                        <p>Wanted the y lorem ipsum xablardom zombir fortadus minatus nakaze
+                        et suplicudo goferta dragon revoluciu decartuym amet mugi's
+                        trip olation(...)</p>
+                    </div>
+                </div>
+
+                <h3><a href="https://anaximenobrito.github.io/AX2MK-page/index.html" target="_self">AX2MK <span>&raquo;</span></a></h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Corrupti fugiat, adipisci mollitia aspernatur,
+                fugit, sequi quod distinctio explicabo inventore porro animi?
+                Mollitia tempore consectetur minima esse
+                accusantium veniam officia iste? Lorem ipsum dolor, sit amet consectetur(...)</p>
+
+                <hr>
+
+                <h3>Notices</h3>
+                <div class="row notice">
+                    <div class="column40">
+                        <img src="imagem/thefight.jpg" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                    <div class="column40">
+                        <img src="imagem/garp.png" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                </div>
+                <div class="row notice">
+                    <div class="column40">
+                        <img src="imagem/thefight.jpg" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                    <div class="column40">
+                        <img src="imagem/garp.png" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                </div>
+                <div class="row notice">
+                    <div class="column40">
+                        <img src="imagem/thefight.jpg" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                    <div class="column40">
+                        <img src="imagem/garp.png" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                </div>
+                <div class="row notice">
+                    <div class="column40">
+                        <img src="imagem/thefight.jpg" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                    <div class="column40">
+                        <img src="imagem/garp.png" alt="thefighter">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit cum voluptate eius labore nulla, et impedit saepe,
+                        exercitationem totam dolorum, aspernatur
+                        aut quod corporis obcaecati voluptatibus asperiores
+                        voluptates quasi sed(...)
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="column80">
+            <div class="row">
                 <div class="column100">
-            <h2 class="principal">These are Amazing Cars</h2>
-            <br>
-            <h3>Ford</h3>
-            <div class="row">
-                <div class="column35">
-                    <div class="galery one">
-                        <img src="imagem/mustang.jpg" alt="mustang img" width="100%;"">
-                        <div class="description">
-                            <h3>Mustang Shelby GT500 2020</h3><br>
-                            <p>
-                                <Span>&#9656; Pricing: </Span>$72,900 min <br>
-                                <span>&#9656; HP: </span>760 @ 7,300 rpm
-                            </p>
+                    <h2 class="principal">These are Amazing Cars</h2>
+                    <br>
+                    <h3>Ford</h3>
+                    <div class="row">
+                        <div class="column100">
+                            <div class="galery one">
+                                <img src="imagem/mustang.jpg" alt="mustang img">
+                                <div class="description">
+                                    <h3>Mustang Shelby GT500 2020</h3><br>
+                                    <p>
+                                        <Span>&#9656; Pricing: </Span>$72,900 min <br>
+                                        <span>&#9656; HP: </span>760 @ 7,300 rpm
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column100">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie.
+                                    Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut.
+                                    Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan.
+                                    Pellentesque scelerisque eget enim at ullamcorper.
+                                    Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae
+                                    lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl,
+                                    ultrices rutrum augue sagittis ac.
+                                    Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim.
+                                    Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="column65">
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie. 
-                            Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut. 
-                            Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan. 
-                            Pellentesque scelerisque eget enim at ullamcorper. 
-                            Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae 
-                            lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl, 
-                            ultrices rutrum augue sagittis ac.
-                            Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim. 
-                            Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero. 
-                            In efficitur lacinia bibendum. Maecenas mollis magna et tincidunt feugiat. Mauris dignissim 
-                            iaculis nulla quis vehicula. In auctor nec lectus et aliquam.
-                            Cras erat urna, faucibus eu magna facilisis, convallis hendrerit elit. Duis vitae maximus risus. Donec justo turpis, 
-                            tincidunt eget interdum vitae, venenatis vitae justo. Integer iaculis fermentum magna, nec ultrices dolor ultricies sed. Donec 
-                            interdum nibh congue erat blandit gravida eu non augue. Nam pulvinar, odio id tempor venenatis, dui elit auctor turpis, 
-                            ac condimentum sem diam dapibus enim. Morbi bibendum tortor orci. In quis velit egestas, euismod eros sit amet, efficitur diam.
-                            Aliquam in suscipit libero. Nulla neque arcu, interdum quis auctor non, varius at augue. Suspendisse a nunc velit.
-                             Pellentesque turpis ligula, aliquam at consectetur sit amet, bibendum eu purus. Praesent placerat, tortor nec congue bibendum, 
-                             justo arcu tempor augue, eget scelerisque massa nisl ac enim. Aenean bibendum commodo nunc ut gravid.
-                              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris auctor iaculis congue.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h3>Mercedes</h3>
-            <div class="row">
-                <div class="column35" style="order: 2;">
-                    <div class="galery">
-                        <img src="imagem/mgtr.jpg" alt="mercedes mgtr img">
-                        <div class="description">
-                            <h3>Mercedes-AMG GT/GTR 2020</h3><br>
-                            <p>
-                                <Span>&#9656; Pricing: </Span>$163,895 min <br>
-                                <span>&#9656; HP: </span>469 @ 155 mph
-                            </p>
+                    <h3>Mercedes</h3>
+                    <div class="row">
+                        <div class="column100" style="order: 1">
+                            <div class="galery">
+                                <img src="imagem/mgtr.jpg" alt="mercedes mgtr img">
+                                <div class="description">
+                                    <h3>Mercedes-AMG GT/GTR 2020</h3><br>
+                                    <p>
+                                        <Span>&#9656; Pricing: </Span>$163,895 min <br>
+                                        <span>&#9656; HP: </span>469 @ 155 mph
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column100" style="order: 2">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie.
+                                    Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut.
+                                    Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan.
+                                    Pellentesque scelerisque eget enim at ullamcorper.
+                                    Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae
+                                    lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl,
+                                    ultrices rutrum augue sagittis ac.
+                                    Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim.
+                                    Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="column65" style="order: 1;"> 
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie. 
-                        Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut. 
-                        Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan. 
-                        Pellentesque scelerisque eget enim at ullamcorper. 
-                        Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae 
-                        lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl, 
-                        ultrices rutrum augue sagittis ac.
-                        Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim. 
-                        Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero. 
-                        In efficitur lacinia bibendum. Maecenas mollis magna et tincidunt feugiat. Mauris dignissim 
-                        iaculis nulla quis vehicula. In auctor nec lectus et aliquam.
-                        Cras erat urna, faucibus eu magna facilisis, convallis hendrerit elit. Duis vitae maximus risus. Donec justo turpis, 
-                        tincidunt eget interdum vitae, venenatis vitae justo. Integer iaculis fermentum magna, nec ultrices dolor ultricies sed. Donec 
-                        interdum nibh congue erat blandit gravida eu non augue. Nam pulvinar, odio id tempor venenatis, dui elit auctor turpis, 
-                        ac condimentum sem diam dapibus enim. Morbi bibendum tortor orci. In quis velit egestas, euismod eros sit amet, efficitur diam.
-                        Aliquam in suscipit libero. Nulla neque arcu, interdum quis auctor non, varius at augue. Suspendisse a nunc velit.
-                        Pellentesque turpis ligula, aliquam at consectetur sit amet, bibendum eu purus. Praesent placerat, tortor nec congue bibendum, 
-                        justo arcu tempor augue, eget scelerisque massa nisl ac enim. Aenean bibendum commodo nunc ut gravid.
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris auctor iaculis congue. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h3>Porsche</h3>
-            <div class="row">
-                <div class="column35" style="order: 1;">
-                    <div class="galery">
-                        <img src="imagem/porsche.jpg" alt="porsche img">
-                        <div class="description">
-                            <h3>2019 PORSCHE 911 CARRERA S SPECS</h3><br>
-                            <p>
-                                <Span>&#9656; Pricing: </Span>$265,000 <br>
-                                <span>&#9656; HP: </span>331kW @ 6500rpm
-                            </p>
+                    <h3>Porsche</h3>
+                    <div class="row">
+                        <div class="column100" style="order: 1;">
+                            <div class="galery">
+                                <img src="imagem/porsche.jpg" alt="porsche img">
+                                <div class="description">
+                                    <h3>2019 PORSCHE 911 CARRERA S SPECS</h3><br>
+                                    <p>
+                                        <Span>&#9656; Pricing: </Span>$265,000 <br>
+                                        <span>&#9656; HP: </span>331kW @ 6500rpm
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="column65" style="order: 2;">
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie. 
-                        Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut. 
-                        Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan. 
-                        Pellentesque scelerisque eget enim at ullamcorper. 
-                        Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae 
-                        lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl, 
-                        ultrices rutrum augue sagittis ac.
-                        Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim. 
-                        Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero. 
-                        In efficitur lacinia bibendum. Maecenas mollis magna et tincidunt feugiat. Mauris dignissim 
-                        iaculis nulla quis vehicula. In auctor nec lectus et aliquam.
-                        Cras erat urna, faucibus eu magna facilisis, convallis hendrerit elit. Duis vitae maximus risus. Donec justo turpis, 
-                        tincidunt eget interdum vitae, venenatis vitae justo. Integer iaculis fermentum magna, nec ultrices dolor ultricies sed. Donec 
-                        interdum nibh congue erat blandit gravida eu non augue. Nam pulvinar, odio id tempor venenatis, dui elit auctor turpis, 
-                        ac condimentum sem diam dapibus enim. Morbi bibendum tortor orci. In quis velit egestas, euismod eros sit amet, efficitur diam.
-                        Aliquam in suscipit libero. Nulla neque arcu, interdum quis auctor non, varius at augue. Suspendisse a nunc velit.
-                        Pellentesque turpis ligula, aliquam at consectetur sit amet, bibendum eu purus. Praesent placerat, tortor nec congue bibendum, 
-                        justo arcu tempor augue, eget scelerisque massa nisl ac enim. Aenean bibendum commodo nunc ut gravid.
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris auctor iaculis congue.
-                        </p>
+                        <div class="column100" style="order: 2;">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat congue sem ut molestie.
+                                    Maecenas convallis ipsum ex, nec convallis ipsum scelerisque vel. Mauris cursus enim nisl, ut suscipit libero rutrum ut.
+                                    Nullam augue dolor, dignissim vel volutpat vitae, consectetur ac ante. Cras pellentesque tempus accumsan.
+                                    Pellentesque scelerisque eget enim at ullamcorper.
+                                    Aenean rutrum magna et odio aliquet commodo. In molestie sapien in euismod finibus. Nulla facilisi. Cras ac eros vitae
+                                    lorem pellentesque mollis id non elit. Sed a tellus tristique, lobortis neque ac, venenatis sem. Duis mollis pharetra nisl,
+                                    ultrices rutrum augue sagittis ac.
+                                    Nullam interdum, risus ac finibus dictum, urna magna interdum neque, non congue nunc eros in enim.
+                                    Vivamus mattis turpis justo, in dictum metus vestibulum et. Cras at elit vulputate, cursus dui et, fermentum libero.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <!--footer-->
-    <div class="footer"><footer>&copy; 2020 Beyond the Wrld: by Anaxímeno Brito</footer></div>
+    <div class="footer"><footer>&copy; 2020 Beyond the Wrld AX2MK #anaximenobrito</footer></div>
     <script src="js/drop.js"></script>
     <script src="js/baranime.js"></script>
     <script src="js/respBar.js"></script>
+    <script type="text/javascript">
+          for(i = 1; i < 4; i++) {
+            var x = document.querySelectorAll('div.bar' + i)[0];
+            x.style.background = 'blue';
+          }
+    </script>
 </body>
 </html>
